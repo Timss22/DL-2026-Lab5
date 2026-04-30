@@ -1,0 +1,17 @@
+gymnasium==1.1.1
+ale-py>=0.10.0
+opencv-python
+numpy
+wandb
+imageio
+imageio-ffmpeg
+
+# PyTorch: install the variant matching your hardware
+# NVIDIA GPU (CUDA 12.1):
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+# AMD GPU (ROCm 6.1) -- used for OpenHW Course-DL server:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/rocm6.1
+# CPU only:
+#   pip install torch torchvision
+torch
+torchvision
