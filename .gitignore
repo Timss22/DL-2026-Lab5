@@ -21,5 +21,3 @@ wandb/
 .vscode/
 .idea/
 
-# Claude Code
-Claude.md
