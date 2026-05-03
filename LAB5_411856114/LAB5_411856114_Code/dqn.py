@@ -498,7 +498,7 @@ class DQNAgent:
         loss.backward() #backpropagation to compute gradients
         if self.use_per:
             self.memory.update_priorities(indices, td_errors.detach().cpu().numpy()) #update priorities in PER based on TD errors
-        torch.nn.utils.clip_grad_norm_(self.q_net.parameters(), 1.0) #gradient clipping to prevent exploding gradients
+        torch.nn.utils.clip_grad_norm_(self.q_net.parameters(), 10) #gradient clipping to prevent exploding gradients
         self.optimizer.step() #update the network parameters using the computed gradients
 
         ########## END OF YOUR CODE ##########

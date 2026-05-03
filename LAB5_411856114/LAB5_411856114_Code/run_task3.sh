@@ -14,7 +14,7 @@ python dqn.py \
   --student-id 411856114 \
   --batch-size 32 \
   --memory-size 200000 \
-  --lr 0.000625 \
+  --lr 0.0001 \
   --discount-factor 0.99 \
   --epsilon-start 1.0 \
   --epsilon-decay 0.9999955 \
