@@ -140,7 +140,7 @@ class PrioritizedReplayBuffer:
     def update_priorities(self, indices, errors):
         ########## YOUR CODE HERE (for Task 3) ##########
 
-        eps = 1e-6
+        eps = 1e-2
         new_priorities = np.abs(errors) + eps
         self.priorities[indices] = new_priorities
         self.max_priority = max(self.max_priority, new_priorities.max()) #update max priority for new transitions
@@ -498,7 +498,7 @@ class DQNAgent:
         loss.backward() #backpropagation to compute gradients
         if self.use_per:
             self.memory.update_priorities(indices, td_errors.detach().cpu().numpy()) #update priorities in PER based on TD errors
-        torch.nn.utils.clip_grad_norm_(self.q_net.parameters(), 10) #gradient clipping to prevent exploding gradients
+        torch.nn.utils.clip_grad_norm_(self.q_net.parameters(), 1.0) #gradient clipping to prevent exploding gradients
         self.optimizer.step() #update the network parameters using the computed gradients
 
         ########## END OF YOUR CODE ##########

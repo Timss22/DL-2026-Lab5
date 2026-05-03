@@ -14,13 +14,13 @@ python dqn.py \
   --student-id 411856114 \
   --batch-size 32 \
   --memory-size 200000 \
-  --lr 0.0001 \
+  --lr 0.000625 \
   --discount-factor 0.99 \
   --epsilon-start 1.0 \
   --epsilon-decay 0.9999955 \
   --epsilon-min 0.05 \
-  --target-update-frequency 1000 \
-  --replay-start-size 10000 \
+  --target-update-frequency 10000 \
+  --replay-start-size 50000 \
   --max-episode-steps 100000 \
   --train-per-step 1 \
   --use-ddqn \
