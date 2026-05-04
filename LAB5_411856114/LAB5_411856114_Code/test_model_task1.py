@@ -18,11 +18,11 @@ class DQN(nn.Module):
     def __init__(self, num_actions):
         super().__init__()
         self.network = nn.Sequential(
-            nn.Linear(4, 128),
+            nn.Linear(4, 64),
             nn.ReLU(),
-            nn.Linear(128, 128),
+            nn.Linear(64, 64),
             nn.ReLU(),
-            nn.Linear(128, num_actions),
+            nn.Linear(64, num_actions),
         )
 
     def forward(self, x):

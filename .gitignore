@@ -8,11 +8,21 @@ build/
 # Virtual environment
 .venv/
 
-# PyTorch model checkpoints
-*.pt
+# PyTorch model checkpoints — intermediate only; submission snapshots are kept
+results/task1/
+results/task2/
+results/per_test/
+results/per_test2/
+results/task3/model_ep*.pt
+results/task3/LAB5_*.pt
+other/temp/
 
 # Weights & Biases
 wandb/
+
+# Evaluation video output
+eval_videos*/
+*.mp4
 
 # macOS
 .DS_Store
@@ -20,4 +30,3 @@ wandb/
 # IDE
 .vscode/
 .idea/
-
