@@ -63,13 +63,13 @@ All scripts must be run from `LAB5_411856114/LAB5_411856114_Code/`.
 ```bash
 cd LAB5_411856114/LAB5_411856114_Code
 
-# Task 1 — CartPole (~minutes on GPU)
+# Task 1 — CartPole 
 bash run_task1.sh
 
-# Task 2 — Pong vanilla DQN (~15-25h on AMD Radeon 8060S)
+# Task 2 — Pong vanilla DQN 
 bash run_task2.sh
 
-# Task 3 — Enhanced DQN, DDQN + PER + 3-step (~faster convergence than Task 2)
+# Task 3 — Enhanced DQN, DDQN + PER + 3-step 
 bash run_task3.sh
 
 # Resume from a wandb checkpoint (place checkpoint.pt in Code dir first)
